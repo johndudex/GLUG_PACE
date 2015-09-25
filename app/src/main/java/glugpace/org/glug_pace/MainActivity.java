@@ -65,8 +65,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         fragmentManager = getSupportFragmentManager();
-        loadSelection(3);
-        loadSelection(1);
+
         navList.setItemChecked(0,true);
 
         HomeFragment homeFragment = new HomeFragment();
