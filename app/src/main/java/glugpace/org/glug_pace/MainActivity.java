@@ -192,27 +192,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 fragmentTransaction.commit();
                 break;
 
- /*
-            case 2:
-                MyFragment2 myFragment2 = new MyFragment2();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentholder,myFragment2);
-                fragmentTransaction.commit();
-                break;
-            case 3:
-                MyFragment3 myFragment3 = new MyFragment3();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentholder,myFragment3);
-                fragmentTransaction.commit();
-                break;
-            case 4:
 
-                break;
-
-            case 5:
-
-                break;
-                 */
         }
 
     }

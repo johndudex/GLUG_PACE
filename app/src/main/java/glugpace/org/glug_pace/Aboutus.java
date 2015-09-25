@@ -20,9 +20,7 @@ import android.widget.Toast;
  */
 public class Aboutus extends Fragment {
 
-    WebView resultsWV,revalWV;
-    Button resbtn,revbtn;
-    private WebView home;
+
 
     public Aboutus() {
         // Required empty public constructor
