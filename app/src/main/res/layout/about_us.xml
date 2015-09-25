@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    tools:context="glugpace.org.glug_pace.Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.shamanland.facebook.likebutton.FacebookLikeButton
+        style="@style/Widget.FacebookLikeButton"
+        app:pageUrl="https://www.facebook.com/glugpace?ref=aymt_homepage_panel"
+        app:pageTitle="GLUG PACE"
+        app:pageText="Glug Pace is an organisation set up in P.A. College of Engineering for Promoting Free and Open Source Softwares"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="50dp"
+        app:pagePictureUrl="https://lh3.googleusercontent.com/JwgQmHg8X2bdSC4yzW2qK9_0G0fx2YFe7r0UQRc7zSAy2pM3gwqHLg53QSQjkvRkAQtqA2aqwpXVUag=w1342-h544"
+        />
+
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/abt"
+    />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glu1"
+        android:layout_gravity="top|center"
+
+        android:layout_marginTop="30dp"
+        />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:layout_marginBottom="30dp"
+    android:textSize="25dp"
+    android:textColor="#000"
+    android:text="\tDesigned By \n \t GLUG PACE"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:text="\t Visit us at \n glugpace.in"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="20dp"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:text="Like us on FB"/>
+</FrameLayout>

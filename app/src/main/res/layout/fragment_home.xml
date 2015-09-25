@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    android:background="#b2dfee"
+    >
+    <ImageButton
+        android:id="@+id/glugbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glu"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="center|top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="GLUG PACE"
+        android:id="@+id/textView1"
+        android:layout_marginTop="195dp"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal|top" />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginTop="85dp"
+       android:textColor="#000"
+       android:id="@+id/thnku1"
+       android:text="  Special Mention \n \n Yajnesh Talapady \n \n nawaf Abdullah \n \n Sai Kiran Hegde \n\n Sanjay Malhotra \n \n Sahil SatishKumar "
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thnku2"
+        android:layout_gravity="center|bottom"
+
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="Thank you for your amazing support "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="99dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/textmain"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:text="\t \t \t An organization Established in P.A. College of Engineering to promote Free and Open Source Softwares (F.O.S.S). under the department of 'Computer Science and Engineering'. Established in the year 2006 by XXXXXXXXXX along with group of students .Today Glug Pace is highly Recognized Organization in Mangaluru with contributions such as 'Matrix OS 2.0' and 'Rakshak' (Automated Distress Notifier).  "
+        />
+
+</FrameLayout>

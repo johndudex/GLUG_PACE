@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@drawable/results"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    tools:context="glugpace.org.glug_pace.Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webhome"
+        > </WebView>
+
+
+
+
+
+</FrameLayout>
