@@ -42,9 +42,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("hello world");
         drawerLayout = (DrawerLayout)findViewById(R.id.drawerlayout);
         navList = (ListView)findViewById(R.id.navlist);
         ArrayList<String> navArray = new ArrayList<String>();

@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -21,7 +23,8 @@ import android.widget.Toast;
 public class Aboutus extends Fragment {
 
 
-
+    ImageButton dev;
+    int click=0;
     public Aboutus() {
         // Required empty public constructor
     }
@@ -44,7 +47,32 @@ public class Aboutus extends Fragment {
 
         View rootView = inflater.inflate(R.layout.about_us, container,
                 false);
-
+       final TextView credit2=(TextView)rootView.findViewById(R.id.credit2);
+        final TextView credit3=(TextView)rootView.findViewById(R.id.credit3);
+       final TextView developers=(TextView)rootView.findViewById(R.id.developers);
+        credit2.setVisibility(View.VISIBLE);
+        credit3.setVisibility(View.VISIBLE);
+        developers.setVisibility(View.INVISIBLE);
+        dev=(ImageButton)rootView.findViewById(R.id.credit1);
+        dev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(click==0)
+                {
+                    credit2.setVisibility(View.INVISIBLE);
+                    credit3.setVisibility(View.INVISIBLE);
+                    developers.setVisibility(View.VISIBLE);
+                    click=1;
+                }
+                else
+                {
+                    click=0;
+                    credit2.setVisibility(View.VISIBLE);
+                    credit3.setVisibility(View.VISIBLE);
+                    developers.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
         
         return rootView;
     }
