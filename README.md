@@ -3,3 +3,5 @@
 
 Need Contributors to work on Push Notifications .
 
+special mention the following for their amazing library 
+<a href="https://github.com/ViksaaSkool/AwesomeSplash.git"> amazing splash </a>
