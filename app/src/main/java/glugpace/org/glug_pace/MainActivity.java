@@ -54,6 +54,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         //navArray.add("Matrix OS");
         navArray.add("VTU RESULTS");
         navArray.add("About Us");
+
         navList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_activated_1,navArray);
         navList.setAdapter(adapter);
