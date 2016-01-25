@@ -1,49 +1,29 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:background="@drawable/results"
+    android:background="@color/AntiqueWhite"
     android:layout_height="match_parent"
     android:layout_marginTop="55dp"
     tools:context="glugpace.org.glug_pace.Fragment1">
 
     <!-- TODO: Update blank fragment layout -->
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/results"
-        > </WebView>
 
 
-
-    <TextView
-        android:layout_marginTop="50dp"
-        android:id="@+id/text1"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check your VTU Resuts Here !"
-        android:layout_gravity="center|top"
-        android:textColor="#FFF"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_marginTop="180dp"
-        android:layout_width="175dp"
-        android:layout_height="70dp"
-        android:text="Results"
-        android:id="@+id/resBtn"
-        android:layout_gravity="center|top"
-        android:textColor="#00918b"
-        android:background="#ceaee8" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_marginTop="320dp"
-        android:layout_width="175dp"
-        android:layout_height="70dp"
-        android:text="Revaluation"
-        android:id="@+id/revBtn"
-        android:layout_gravity="center|top"
-        android:textColor="#00918b"
-        android:background="#ceaee8" />
-
+        android:id="@+id/EnterUSN"
+        android:textColorHint="@color/common_signin_btn_text_light"
+        android:hint="Enter Your USN"
+        android:textColor="@color/Blue"
+        android:layout_gravity="center" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/BlueViolet"
+    android:layout_gravity="center"
+    android:layout_marginTop="60dp"
+    android:text="Submit"
+    android:id="@+id/UsnBtn"
+    android:textColor="@color/wallet_highlighted_text_holo_light"/>
 
 </FrameLayout>

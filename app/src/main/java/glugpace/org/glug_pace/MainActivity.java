@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         navArray.add("Home");
         navArray.add("Feeds");
         navArray.add("GLUG Events");
-        //navArray.add("Matrix OS");
+        navArray.add("Manual");
         navArray.add("VTU RESULTS");
         navArray.add("About Us");
 
@@ -165,21 +165,21 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 fragmentTransaction.replace(R.id.fragmentholder,homeFragment).addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
-              
+
             case 1:
                 Fragment1 myFragment1 = new Fragment1();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentholder,myFragment1).addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
-            case 3:
+            case 4:
                 Results results =new Results();
                 fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentholder,results).addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
 
-            case 4:
+            case 5:
                 Aboutus about =new Aboutus();
                 fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentholder,about).addToBackStack(null);
@@ -191,7 +191,11 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 fragmentTransaction.replace(R.id.fragmentholder,Fragment2);
                 fragmentTransaction.commit();
                 break;
-
+            case 3:
+                Manual manual=new Manual();
+                fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentholder,manual).addToBackStack(null);
+                fragmentTransaction.commit();
 
         }
 

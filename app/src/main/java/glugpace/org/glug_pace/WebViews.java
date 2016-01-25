@@ -1,13 +1,10 @@
 package glugpace.org.glug_pace;
 
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.AppCompatButton;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,21 +12,19 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
-
 
 /**
- * A simple {@link Fragment} subclass.
+ * Created by john on १९-०१-२०१६.
  */
-public class Results extends Fragment {
+public class WebViews extends Fragment {
+
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
-    public Results() {
+    ImageButton dev;
+    int click=0;
+    public WebViews() {
         // Required empty public constructor
     }
 
@@ -49,34 +44,29 @@ public class Results extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        final View rootView = inflater.inflate(R.layout.results, container,
+        View rootView = inflater.inflate(R.layout.webviews, container,
                 false);
-        final EditText UserUsn=(EditText)rootView.findViewById(R.id.EnterUSN);
-
-        Button UsnBtn=(Button)rootView.findViewById(R.id.UsnBtn);
-        UsnBtn.setOnClickListener(new View.OnClickListener() {
+        fragmentManager = getFragmentManager();
+        Bundle bundle=getArguments();
+        final WebView wv=(WebView)rootView.findViewById(R.id.CommomWV);
+        wv.loadUrl("http://www.fastvturesults.com/check_new_results/"+bundle.getString("url"));
+        wv.setWebViewClient(new WebViewClient() {
             @Override
-            public void onClick(View v) {
-                 String Qstring= UserUsn.getText().toString();
-                if(Qstring.length()!=10) {
-                    Snackbar.make(v, "Check Your USN and enter again !!!", Snackbar.LENGTH_LONG).show();
-                }
-                else {
-                    Bundle bundle=new Bundle();
-                    bundle.putString("url",Qstring);
-
-                    fragmentManager=getFragmentManager();
-                    WebViews wb = new WebViews();
-                    wb.setArguments(bundle);
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragmentholder, wb).addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
-
-
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return false;
             }
         });
-
+        wv.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK && wv.canGoBack()) {
+                    wv.goBack();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         return rootView;
     }
@@ -95,6 +85,8 @@ public class Results extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
+
 
 
 }

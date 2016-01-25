@@ -34,5 +34,8 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.3.0'
     compile 'com.google.android.gms:play-services-gcm:7.3.0'
     compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
-    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    compile 'com.android.support:design:23.1.1'
+
+
+
 }
