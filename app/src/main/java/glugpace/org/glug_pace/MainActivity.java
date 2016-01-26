@@ -142,14 +142,14 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         rlIcon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadSelection(3);
+                loadSelection(4);
                 rightLowerMenu.close(true);
             }
         });
         rlIcon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadSelection(4);
+                loadSelection(5);
                 rightLowerMenu.close(true);
             }
         });

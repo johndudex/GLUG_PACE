@@ -29,6 +29,9 @@ import android.widget.Toast;
 public class Results extends Fragment {
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
+
+    EditText UserUsn;
+    Button UsnBtn;
     public Results() {
         // Required empty public constructor
     }
@@ -51,35 +54,51 @@ public class Results extends Fragment {
 
         final View rootView = inflater.inflate(R.layout.results, container,
                 false);
-        final EditText UserUsn=(EditText)rootView.findViewById(R.id.EnterUSN);
+        UserUsn=(EditText)rootView.findViewById(R.id.EnterUSN);
 
-        Button UsnBtn=(Button)rootView.findViewById(R.id.UsnBtn);
+        UsnBtn=(Button)rootView.findViewById(R.id.UsnBtn);
         UsnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 String Qstring= UserUsn.getText().toString();
-                if(Qstring.length()!=10) {
-                    Snackbar.make(v, "Check Your USN and enter again !!!", Snackbar.LENGTH_LONG).show();
+                validate(v);
+            }
+        });
+
+        UserUsn.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode==KeyEvent.KEYCODE_ENTER)
+                {
+                    validate(v);
+                    return true;
                 }
-                else {
-                    Bundle bundle=new Bundle();
-                    bundle.putString("url",Qstring);
-
-                    fragmentManager=getFragmentManager();
-                    WebViews wb = new WebViews();
-                    wb.setArguments(bundle);
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragmentholder, wb).addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
-
-
+                return false;
             }
         });
 
 
         return rootView;
     }
+
+    private void validate(View v) {
+
+        String Qstring = UserUsn.getText().toString().trim();
+        if (Qstring.length() != 10) {
+            Snackbar.make(v, "Check Your USN and enter again !!!", Snackbar.LENGTH_LONG).show();
+        } else {
+            Bundle bundle = new Bundle();
+            bundle.putString("url", Qstring);
+
+            fragmentManager = getFragmentManager();
+            WebViews wb = new WebViews();
+            wb.setArguments(bundle);
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragmentholder, wb).addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+
+    }
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
